@@ -14,13 +14,16 @@ import orderRoute from "./routes/order.js";
 import paymentRoute from "./routes/payment.js";
 import dashboardRoute from "./routes/stats.js";
 
-config({
-  path: "./.env",
-});
+
+config({path:"./config.env"})
+
+
 
 const port = process.env.PORT || 4000;
 const mongoURI = process.env.MONGO_URI || "";
 const stripeKey = process.env.STRIPE_KEY || "";
+
+
 
 connectDB(mongoURI);
 

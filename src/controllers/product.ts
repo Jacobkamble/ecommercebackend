@@ -86,6 +86,8 @@ export const newProduct = TryCatch(
     const { name, price, stock, category } = req.body;
     const photo = req.file;
 
+    console.log(photo,"photo")
+
     if (!photo) return next(new ErrorHandler("Please add Photo", 400));
 
     if (!name || !price || !stock || !category) {
